@@ -7,12 +7,8 @@
 6 animare le altre 2 parole
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
-*{
-    /*box-sizing: border-box;*/
-}
 main{
     border: 1px solid #000;
-    /*width: fit-content;*/
     width: 400px;
     margin: 0 auto;
     margin-top: 100px;
@@ -29,17 +25,13 @@ main{
   left: 0;
   color: #6b889b;
   margin-left: 5px;
-  
-  
-}
-.parole i:first-child  {
-  animation:  fadeIn 10s linear infinite 0s;
+  animation:  fadeIn 9s linear infinite 0s;
 }
 .parole i:nth-child(2) {
-  animation:  fadeIn 10s linear infinite 10s;
+  animation-delay: 3s;
 }
 .parole i:last-child {
-  animation:  fadeIn 10s linear infinite 20s;
+  animation-delay: 6s;
 }
 
 /* @keyframes duration | easing-function | delay | iteration-count | direction | fill-mode | play-state | name */
