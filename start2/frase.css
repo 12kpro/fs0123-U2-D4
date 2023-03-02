@@ -26,49 +26,30 @@ main{
   position: absolute;
   width: 100px;
   opacity: 0;
-  transform: translateY(-17px);
   left: 0;
   color: #6b889b;
+  margin-left: 5px;
+  
   
 }
 .parole i:first-child  {
-  opacity: 1;
-  transform: translateY(1px);
-  animation:  5s ease-out 1s 1 forwards fadeOut /*, fadeIn 2s ease-in 9s both */;
+  animation:  fadeIn 10s linear infinite 0s;
 }
 .parole i:nth-child(2) {
-  animation:  2s ease-in 5s infinite both fadeIn;
+  animation:  fadeIn 10s linear infinite 10s;
 }
 .parole i:last-child {
-  animation:  2s ease-in 7s infinite both fadeIn;
+  animation:  fadeIn 10s linear infinite 20s;
 }
+
 /* @keyframes duration | easing-function | delay | iteration-count | direction | fill-mode | play-state | name */
 /*animation: 3s ease-in 1s 2 reverse both paused slidein;-**/
-  @keyframes fadeOut {
-    from {
-      opacity: 1;
-      transform: translateY(1px);
-    }
   
-    to {
-      opacity: 0;
-      transform: translateY(17px);
-    }
-  }
-  
-  @keyframes fadeIn {
-    0%   {
-      opacity: 0;
-      transform: translateY(-17px);
-    }
-/*    25%  {top: 200px;}*/
-    50%  {
-      opacity: 1;
-      transform: translateY(1px);
-    }
-/*    75%  {top: 200px;}*/
-    100% {
-      opacity: 0;
-      transform: translateY(17px);
-    }
-  }
+@keyframes fadeIn{
+    0% { opacity: 0; }
+    20% { opacity: 0; transform: translateY(-17px); }
+    40% { opacity: 1; transform: translateY(0px); }
+    60% { opacity: 1; transform: translateY(0px); }
+    80% { opacity: 0; transform: translateY(17px); }
+    100% { opacity: 0; }
+}  
